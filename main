@@ -1,0 +1,32 @@
+questions = [
+    "Q1:- Who is the national poet of pakistan?",
+    "Q2:- Which rever is known as the lifeline of pakistan?",
+    "Q3:- Which city is the capital of pakistan?",
+    "Q4:- When was pakistan officially declared an Islamic republic pakistan?",
+    "Q5:- Which political party emerged as the lagest party in 2018 general elections of pakistan?",
+]
+
+choices = [
+    "a) faiz ahmed khan b) mirza ghalib c) allama muhammad iqbal d) ahmed faraz",
+    "a) indus river b) jhelum river c) chenab river d) ravi river",
+    "a) karachi b) lahore c) islamabad d) rawalpindi",
+    "a) 1947 b) 1956 c) 1971 d) 1980",
+    "a) pti b) pmln c) ppp d) mqm",
+]
+
+correct_answers = ["allama muhammad iqbal", "indus river", "islamabad", "1956", "pti"]
+
+prize = [100000, 200000, 2500000, 2700000, 4500000]
+
+money = 0
+for i in range(len(questions)):
+    print(questions[i])
+    print(choices[i])
+    answer = input("Enter your answer:\n")
+    if answer == correct_answers[i]:
+        print("Congrats! Your answer is correct.")
+        money = money + prize[i]
+        print("You win ", money, "RS.")
+    else:
+        print("Sorry your answer is incorrect your total Prize is", money, "RS.")
+        break
